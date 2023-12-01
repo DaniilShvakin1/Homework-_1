@@ -1,47 +1,31 @@
-a = 0
-b = 0
-c = 0
-d = 0
-e = 0
-print(' '
-      '')
-a = input()
-if a == '1':
-    print(' ')
-    b = input()
-    if b == '1':
-        print('')
-    else:
-        print('')
-elif a == '2':
-    print('')
-    c = input()
-    if c == '1':
-        print('')
-    elif c == '2':
-        print('')
-        d = input()
-        if d == '1':
-            print('')
-            e = input()
-            if e == '1':
-                print('')
-            elif e == '2':
-                print('')
-            elif e == '3':
-                print('')
-            else :
-                print('')
-        elif d == '2':
-            print('е боли')
-        elif d == '3':
-            print('')
-        else:
-            print('')
-    elif c == '3':
-        print('')
-    else:
-        print('')
-elif a == '3':
-    print('')
+def stop_story():
+    global step
+    step = 0
 
+
+while step > 0:
+    if step == 1:
+        print("Вы пришли к развилке ")
+        print("куда идти")
+        print("направо 0")
+        print("налево 1")
+        answer = int(input())
+        if answer == 0:
+            print("Вы пошли направо")
+            step = 2
+        if answer == 1:
+            print("вы пошли налево")
+            step = 3
+    if step == 2:
+        print("Вы пришли к развилке")
+        print("Куда идти")
+        print("направо 0")
+        print("налево 1")
+        answer = int(input())
+        if answer == 0:
+            print("Вы пошли направо")
+            print("Вы умерли")
+            raise SystemExit
+        if answer == 1:
+            print("вы пошли налево")
+            step = 3
